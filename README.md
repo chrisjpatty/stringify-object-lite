@@ -3,7 +3,7 @@ An extremely light-weight function for recursively stringify objects without add
 
 ## Installation
 
-```javascript
+```shell
 npm install --save stringify-object-lite;
 or
 yarn add stringify-object-lite
