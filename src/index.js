@@ -26,6 +26,22 @@ function recursivelyBuildObject(obj, k){
   }
 }
 
-module.exports({
-  stringifyObjectLite: stringify
-})
+var obj = {
+  a: "A string",
+  b: "Another string",
+  c: ["an", "array", "of", "strings", "and", 1, "int"],
+  nested: {
+    a1: "nested",
+    b2: "object of strings",
+    c3: {
+      andA: "deeply",
+      nested: "object"
+    }
+  }
+}
+
+console.log(stringifyObject(obj))
+
+module.exports = {
+  stringifyObjectLite: stringifyObject
+}
