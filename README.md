@@ -1,22 +1,22 @@
 # stringify-object-lite
 An extremely light-weight function for recursively stringify objects without adding slashes and other types of url-encoding. Clocks in at only 628 bytes minified
 
-##Installation
+## Installation
 
-```
+```javascript
 npm install --save stringify-object-lite;
 or
 yarn add stringify-object-lite
 ```
 
-##Usage
+## Usage
 
-######For ES6 and up
+###### For ES6 and up
 ```javascript
 import stringifyObjectLite from 'stringify-object-lite';
 ```
 
-######For ES5
+###### For ES5
 ```javascript
 var stringifyObjectLite = require("stringify-object-lite");
 ```
