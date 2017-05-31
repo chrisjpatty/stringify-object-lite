@@ -1,5 +1,5 @@
 # stringify-object-lite
-An extremely light-weight function for recursively stringify objects without adding slashes and other types of url-encoding. Clocks in at only 628 bytes minified
+An extremely light-weight function for recursively stringify objects without adding slashes and other types of url-encoding. Clocks in at only 628 bytes minified with no dependencies.
 
 ## Installation
 
