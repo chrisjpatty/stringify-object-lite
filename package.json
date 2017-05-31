@@ -1,0 +1,11 @@
+{
+  "name": "stringify-object-lite",
+  "version": "1.0.0",
+  "description": "An extremely light-weight function for recursively stringifying objects without adding slashes and other types of url-encoding. clocks in at only 628 bytes minified",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@chrisjpatty",
+  "license": "ISC"
+}
