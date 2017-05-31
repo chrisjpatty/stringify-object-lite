@@ -26,6 +26,4 @@ function recursivelyBuildObject(obj, k){
   }
 }
 
-module.exports = {
-  stringifyObjectLite: stringifyObject
-}
+module.exports = stringifyObject;
