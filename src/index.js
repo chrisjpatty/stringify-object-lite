@@ -15,7 +15,7 @@ function recursivelyBuildObject(obj, k){
     string += k + ": \"" + obj[k] + "\", ";
   }else{
     if(Array.isArray(obj[k])){
-      string += k + ": " + '["' + obj[k].join('\",\"') +'"], ';
+      string += k + ": " + '[' + (obj[k].length > 0 ? '"' : '') + obj[k].join('\",\"') + (obj[k].length > 0 ? '"' : '') + '], ';
     }else{
       string += k + ": " + start;
       Object.keys(obj[k]).forEach(function(subKey){
