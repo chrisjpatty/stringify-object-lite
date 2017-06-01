@@ -1,6 +1,6 @@
 {
   "name": "stringify-object-lite",
-  "version": "0.1.04",
+  "version": "0.1.05",
   "description": "An extremely light-weight function to recursively stringifying objects without adding slashes and other types of url-encoding. clocks in at only 628 bytes minified",
   "main": "index.js",
   "scripts": {
