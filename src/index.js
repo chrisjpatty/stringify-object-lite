@@ -3,6 +3,7 @@ var start = "{";
 var end = "}";
 
 function stringifyObject(object){
+  string = "";
   Object.keys(object).forEach(function(key){
     recursivelyBuildObject(object, key);
   })
