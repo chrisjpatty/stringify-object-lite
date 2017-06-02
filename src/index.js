@@ -16,15 +16,53 @@ function recursivelyBuildObject(obj, k){
     string += k + ": \"" + obj[k] + "\", ";
   }else{
     if(Array.isArray(obj[k])){
-      string += k + ": " + '[' + (obj[k].length > 0 ? '"' : '') + obj[k].join('\",\"') + (obj[k].length > 0 ? '"' : '') + '], ';
+      string += k + ": " + '[';
+        obj[k].forEach((arrItem, i)=>{
+          if(typeof arrItem === 'object'){
+            string += '{';
+            Object.keys(arrItem).forEach(function(arrObj){
+              recursivelyBuildObject(arrItem, arrObj);
+            })
+            string += '}' + (obj[k].length === i + 1 ? '' : ',');
+          }
+          else{
+            string += '"' + arrItem + (obj[k].length === i + 1 ? '"' : '",')
+          }
+        })
+        string += '], ';
     }else{
       string += k + ": " + start;
       Object.keys(obj[k]).forEach(function(subKey){
         recursivelyBuildObject(obj[k], subKey);
       })
-      string += end + ",";
+      string += end;
     }
   }
 }
+
+let object = {
+  a: "one",
+  b: [
+    {
+      c: "Cool cool",
+      d: "Also Cool",
+      e: {
+        yes: "uh huh",
+        yeah: "cool"
+      }
+    },
+    "Veep",
+    2,
+    143,
+    "Another"
+  ],
+  g: {
+    h: "high",
+    i: "icicle",
+    j: "Jeckyll"
+  }
+}
+
+console.log(stringifyObject(object))
 
 module.exports = stringifyObject;
